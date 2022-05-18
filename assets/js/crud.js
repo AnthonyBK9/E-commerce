@@ -54,3 +54,5 @@ function printProduct(product) {
     }
 }
 export { getProduct, createProduct, printProduct }
+
+

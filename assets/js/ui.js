@@ -20,5 +20,4 @@ function printProduct(product) {
     container.innerHTML = html;
     }
 }
-
 export { printProduct };
