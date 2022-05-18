@@ -1,10 +1,11 @@
 
-import { getProduct, createProduct, printProduct } from "./crud.js";
+import { getProduct, createProduct, deleteProduct, editProduct } from "./crud.js";
 
 
 getProduct();
 
 window.getProduct = getProduct;
 window.createProduct = createProduct;
-window.printProduct = printProduct;
+window.deleteProduct = deleteProduct;
+window.editProduct = editProduct;
 

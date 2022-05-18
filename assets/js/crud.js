@@ -1,6 +1,11 @@
-// import { printProduct } from './printProduct';
+import { printProduct } from './ui.js';
 
 const url = 'https://e-commerce-api-academlo.herokuapp.com/api/products'
+let editingID = null;
+
+function resetForm() {
+    document.getElementById('form').reset();
+}
 
 function getProduct() {
     axios.get(url)
@@ -17,13 +22,15 @@ function getProduct() {
 
 function createProduct() {
     const product = {
-        name: 'Playera Academlo',
-        price: 34,
-        image: 'https://www.academlo.com/img/home/estudiando-programacion-min.png'
+        name: document.getElementById('product').value,
+        price: document.getElementById('price').value,
+        image: document.getElementById('image').value,
     }
     axios.post(url, product)
     .then((response) => {
         alert('Se creó correctamente');
+        getProduct();
+        resetForm();
     })
     .catch(function (error) {
         alert('No se pudo crear la tarea');
@@ -31,28 +38,37 @@ function createProduct() {
     })
 }
 
-function printProduct(product) {
-    // Identificar el contenedor
-    const container = document.getElementById('product-container');
-    // Generar el HTML
-    let html = '';
-    for(let i = 0; i < product.length; i++) {
-        html += `<div class="col-md-6 col-lg-4 mt-3">
-                    <div class="card">
-                        <div class="card">
-                            <img src="${product[i].image}"></img> class="card-img-top" alt="${product[i].name}">
-                            <div class="card-body">
-                                <h5 class="card-title">${product[i].name}</h5>
-                                <p class="card-text">${product[i].price}</p>
-                                <button class="btn btn-primary">Editar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-    // Imprimir el HTML
-    container.innerHTML = html;
+function deleteProduct(id){
+    const confirmation = confirm('¿Estás seguro de eliminar la tarea?');
+    if(!confirmation){
+        return
     }
+    axios.delete(`${url}/${id}`)
+    .then( () => {
+        alert('El producto se eliminó correctamente');
+        getProduct();
+    })
+    .catch((error) => {
+        alert('No se pudo eliminar el producto pague por el >=|');
+    })
 }
-export { getProduct, createProduct, printProduct }
+
+function editProduct(id) {
+    axios.get(`${url}/${id}`)
+        .then((response) => {
+            editingID = id;
+            const product = response.data
+            console.log(product);
+            document.getElementById('edit-product').value = product.name;
+            document.getElementById('edit-price').value = product.price;
+            document.getElementById('edit-image').value = product.image;
+        })
+        .catch((error) => {
+            console.log('No se pudo editar el producto')
+        })
+}
+
+
+export { getProduct, createProduct, deleteProduct, editProduct }
 
 

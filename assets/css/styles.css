@@ -1,0 +1,11 @@
+.card img {
+    width: 100%;
+}
+
+.card {
+    width: 18rem;
+}
+
+body {
+    background: red !important;
+}
