@@ -11,9 +11,8 @@ function getProduct() {
     axios.get(url)
     .then((p) => {
         const products = p.data;
-        // console.log(products)
         printProduct(products);
-        // printProductShop(products);
+
     })
     .catch((err) => {
         console.log('No se logró conectar la API');

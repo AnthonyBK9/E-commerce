@@ -34,7 +34,8 @@ function printProductShop(product) {
     const containerShop = document.getElementById('product-container-p');
     let htmlShop = '';
     for(let i = 0; i < product.length; i++) {
-        htmlShop += `<div class="col-md-6 col-lg-4 mt-3">
+        htmlShop += 
+                `<div class="col-md-6 col-lg-4 mt-3">
                     <div class="card">
                         <div class="text-center">
                             <div class="img-container">
