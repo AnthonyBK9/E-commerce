@@ -11,7 +11,7 @@ function getProduct() {
     axios.get(url)
     .then((p) => {
         const products = p.data;
-        console.log(products)
+        // console.log(products)
         printProduct(products);
     })
     .catch((err) => {
@@ -68,7 +68,22 @@ function editProduct(id) {
         })
 }
 
+function updateProduct() {
+    const productEdited = {
+        name:  document.getElementById('edit-product').value,
+        price: document.getElementById('edit-price').value,
+        image: document.getElementById('edit-image').value
+    }
+    axios.put(`${url}/${editingID}`, productEdited)
+        .then((response) => {
+            getProduct();
+        })
+        .catch((error) => {
+            console.log('Problemas al editar')
+        })
+}
 
-export { getProduct, createProduct, deleteProduct, editProduct }
+
+export { getProduct, createProduct, deleteProduct, editProduct, updateProduct }
 
 
