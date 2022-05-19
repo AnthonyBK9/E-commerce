@@ -76,10 +76,11 @@ function updateProduct() {
     }
     axios.put(`${url}/${editingID}`, productEdited)
         .then((response) => {
+            console.log(productEdited);
             getProduct();
         })
         .catch((error) => {
-            console.log('Problemas al editar')
+            console.log(error)
         })
 }
 
