@@ -6,8 +6,10 @@ function printProduct(product) {
     for(let i = 0; i < product.length; i++) {
         html += `<div class="col-md-6 col-lg-4 mt-3">
                     <div class="card">
-                        <div class="card text-center">
-                            <img src="${product[i].image}" alt="${product[i].name}">
+                        <div class="text-center">
+                            <div class="img-container">
+                                <img src="${product[i].image}" alt="${product[i].name}">
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">${product[i].name}</h5>
                                 <p class="card-text">$${product[i].price} US</p>
