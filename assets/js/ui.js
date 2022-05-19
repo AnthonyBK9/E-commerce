@@ -29,4 +29,31 @@ function printProduct(product) {
     container.innerHTML = html;
     }
 }
-export { printProduct };
+
+function printProductShop(product) {
+    const containerShop = document.getElementById('product-container-p');
+    let htmlShop = '';
+    for(let i = 0; i < product.length; i++) {
+        htmlShop += `<div class="col-md-6 col-lg-4 mt-3">
+                    <div class="card">
+                        <div class="text-center">
+                            <div class="img-container">
+                                <img src="${product[i].image}" alt="${product[i].name}">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${product[i].name}</h5>
+                                <p class="card-text">$${product[i].price} US</p>
+                            </div>
+                            <div class="text-end">
+                                <button class="btn btn-success">
+                                    Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+    containerShop.innerHTML = htmlShop;
+    }
+}
+
+export { printProduct, printProductShop };

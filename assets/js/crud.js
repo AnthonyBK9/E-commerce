@@ -1,4 +1,4 @@
-import { printProduct } from './ui.js';
+import { printProduct, printProductShop } from './ui.js';
 
 const url = 'https://e-commerce-api-academlo.herokuapp.com/api/products'
 let editingID = null;
@@ -13,9 +13,21 @@ function getProduct() {
         const products = p.data;
         // console.log(products)
         printProduct(products);
+        // printProductShop(products);
     })
     .catch((err) => {
         console.log('No se logró conectar la API');
+    })
+}
+
+function getProductShop() {
+    axios.get(url)
+    .then((p) => {
+        const products = p.data;
+        printProductShop(products);
+    })
+    .catch((err) => {
+        console.log('No se logró conectar la API Shop');
     })
 
 }
@@ -84,6 +96,6 @@ function updateProduct() {
 }
 
 
-export { getProduct, createProduct, deleteProduct, editProduct, updateProduct }
+export { getProduct, getProductShop, createProduct, deleteProduct, editProduct, updateProduct }
 
 
