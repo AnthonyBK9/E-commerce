@@ -46,7 +46,7 @@ function printProductShop(product) {
                                 <p class="card-text">$${product[i].price} US</p>
                             </div>
                             <div class="text-end">
-                                <button class="btn btn-success1" type="submit" onclick="addCart(${product[i]})">
+                                <button class="btn btn-success1 agregar-card" type="submit">
                                     Agregar al carrito
                                 </button>
                             </div>
@@ -72,7 +72,7 @@ function printCart(product) {
                                     <p class="card-text">$${product[i].price} US</p>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-success1">
+                                    <button class="btn btn-success">
                                         Agregar al carrito
                                     </button>
                                 </div>
