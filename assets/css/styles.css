@@ -37,10 +37,14 @@ body {
 }
 .header {
     background-color: #eb4a5a;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    top: 0;
 }
 .navbar{
     width: 100%;
-    height: 80px;
+    height: 60px;
     margin-bottom: 30px;
     background-color: transparent;
 }
@@ -56,7 +60,37 @@ body {
     color: #434343;
     margin: 0 0 0 12px;
 }
+.fixedCart {
+    width: 300px;
+    height: 100vh;
+    background-color: #f9fafc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    transition: all 0.8s;
+}
+.fixedCart a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+    color: #434343;
+}
+.hidden {
+    max-width: 0;
+    max-height: 0;
+    transition: all 1s;
+    overflow: hidden;
+}
+.hidden a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+}
 /* ================card================= */
+.container-p {
+    margin-top: 150px;
+}
 
 .img-container {
     min-height: 300px;
@@ -88,4 +122,13 @@ body {
         width: 80%;
         margin: auto;
     }
+}
+.btn-success1 {
+    background-color: #eb4a5a;
+    color: #f9fafc;
+    border: none;
+}
+.btn-success1:hover {
+    background-color: #bd434f;
+    color: #f9fafc;
 }

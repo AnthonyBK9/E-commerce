@@ -26,20 +26,32 @@
                         <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
                     </div>
                     <div class="nav-cart">
-                        <a href="#" class="img-cart">
+                        <a class="img-cart" onclick="toggleCart()">
                             <img src="/assets/img//carrito-de-compras.png" alt="">
                         </a>
                     </div>
+                    
                 </form>
               </nav>
         </div>
+        <div id="hidden" class="hidden">
+            <div class="container text-end">
+                <button onclick="toggleCart()" class="btn exit">x</button>
+            </div>
+            <div id="cartView" class="container">
+                
+            </div>  
+        </div>
     </header>
-    <div class="container mt-5">
+    
+    <div class="container container-p">
+
         <div class="row">
             <h2>Nuestros Productos</h2>
         </div>
         <div class="row" id="product-container-p"></div>
     </div>
+        
     <script src="/assets/js/app.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/50ead72691.js" crossorigin="anonymous"></script>

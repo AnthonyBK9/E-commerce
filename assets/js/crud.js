@@ -95,6 +95,7 @@ function updateProduct() {
 }
 
 
-export { getProduct, getProductShop, createProduct, deleteProduct, editProduct, updateProduct }
+
+export { getProduct, getProductShop, createProduct, deleteProduct, editProduct, updateProduct}
 
 
