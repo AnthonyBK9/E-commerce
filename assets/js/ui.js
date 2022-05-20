@@ -46,16 +46,17 @@ function printProductShop(product) {
                                 <p class="card-text">$${product[i].price} US</p>
                             </div>
                             <div class="text-end">
-                                <button class="btn btn-success1" onclick="AddCart()">
+                                <button class="btn btn-success1" type="submit" onclick="addCart(${product[i]})">
                                     Agregar al carrito
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>`
-    containerShop.innerHTML = htmlShop;
     }
+    containerShop.innerHTML = htmlShop;
 }
+
 function printCart(product) {
     const cartView = document.getElementById('cartView'); 
     let htmlCart = '';

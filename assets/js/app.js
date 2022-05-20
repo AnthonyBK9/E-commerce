@@ -1,6 +1,6 @@
 
 import { getProduct, createProduct, deleteProduct, editProduct, updateProduct, getProductShop } from "./crud.js";
-import { toggleCart } from "./DOM.js"
+import { toggleCart, addCart, getCartProduct} from "./DOM.js"
 
 getProduct();
 getProductShop();
@@ -11,4 +11,6 @@ window.deleteProduct = deleteProduct;
 window.editProduct = editProduct;
 window.updateProduct = updateProduct;
 window.toggleCart = toggleCart;
+window.addCart = addCart;
+
 

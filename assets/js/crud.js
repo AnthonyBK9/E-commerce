@@ -12,7 +12,7 @@ function getProduct() {
     .then((p) => {
         const products = p.data;
         printProduct(products);
-
+        
     })
     .catch((err) => {
         console.log('No se logró conectar la API');
@@ -24,11 +24,11 @@ function getProductShop() {
     .then((p) => {
         const products = p.data;
         printProductShop(products);
+        // console.log(products);
     })
     .catch((err) => {
         console.log('No se logró conectar la API Shop');
     })
-
 }
 
 function createProduct() {
