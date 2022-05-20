@@ -36,11 +36,27 @@ function getCartProduct(cart) {
         name: cart.querySelector('h5').textContent,
         price: price,
         amount: 1
-    }    
+    }  
     
-    cartProducts.push(getCart);
+    const exists = cartProducts.some(cart => cart.id === getCart.id)
+    console.log(exists)
+    if(exists){
+        const product = cartProducts.map( productCard => {
+            if (productCard.id === getCart.id) {
+                productCard.amount++;
+                return productCard;
+            } else {
+                return productCard;
+            }
+        })
+    } else {
+        cartProducts = [...cartProducts, getCart]
+    }
+    
+    // cartProducts.push(getCart);
     printCart(cartProducts);
     console.log(cartProducts);
 }
+
 
 export { toggleCart, addCart, getCartProduct, getId, getPrice};
