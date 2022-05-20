@@ -61,7 +61,7 @@ function printCart(product) {
     const cartView = document.getElementById('cartView'); 
     let htmlCart = '';
     for(let i = 0; i < product.length; i++){
-        htmlCart +=`<div class="col-md-6 col-lg-4 mt-3">
+        htmlCart +=`<div class="col-md-12 mt-3">
                         <div class="card">
                             <div class="text-center">
                                 <div class="img-container">
@@ -69,18 +69,18 @@ function printCart(product) {
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">${product[i].name}</h5>
-                                    <p class="card-text">$${product[i].price} US</p>
+                                    <p class="card-text">${product[i].price}</p>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-success">
-                                        Agregar al carrito
+                                    <button class="btn btn-danger">
+                                        <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>`
     }
-    cartView.innerHTML = cartView;
+    cartView.innerHTML = htmlCart;
 }
 
-export { printProduct, printProductShop };
+export { printProduct, printProductShop, printCart };

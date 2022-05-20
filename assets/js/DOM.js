@@ -1,6 +1,6 @@
 
 let cartProducts = [];
-let id = 0;
+let id = 1;
 document.addEventListener('click', addCart);
 
 function toggleCart() {
@@ -19,15 +19,15 @@ function addCart(e) {
 }
 
 function getCartProduct(cart) {
-    id += cartProducts.length;
+    id++;
     const getCart = {
         id: id,
-        img: cart.querySelector('img').src,
+        image: cart.querySelector('img').src,
         name: cart.querySelector('h5').textContent,
-        precio: cart.querySelector('p').textContent
+        price: cart.querySelector('p').textContent
     }    
     cartProducts.push(getCart);
-    // console.log(getCart);
+    printCart(cartProducts);
     console.log(cartProducts);
 }
 

@@ -1,4 +1,4 @@
-import { printProduct, printProductShop } from './ui.js';
+import { printProduct, printProductShop} from './ui.js';
 
 const url = 'https://e-commerce-api-academlo.herokuapp.com/api/products'
 let editingID = null;
