@@ -113,6 +113,7 @@ body {
     transition: all 0.9s;
     padding: 5px;
 }
+
 .card:hover {
     transform: scale(1.1);
     transition: transform 0.9s;
@@ -132,3 +133,84 @@ body {
     background-color: #bd434f;
     color: #f9fafc;
 }
+
+/* ================ Carrito ================= */
+
+.card-body-cart {
+    display: flex;
+}
+
+.img-container-cart {
+    text-align: left;
+}
+
+.img-container-cart img {
+    width: 90%;
+}
+
+.card-cart img {
+    max-width: 100%;
+}
+
+.card-cart {
+   border-radius: 3px;
+    border: 1px solid #939597;
+    width: 90%;
+    padding: 3px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.img-container-cart {
+    width: 50%;
+}
+
+.card-title-cart {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.card-text-cart {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.delete-b {
+    position: relative;
+    top: 9%;
+    right: -40%;
+    font-size: 15px;
+    padding: 3px 6px;
+    border: 1px solid #686565;
+    background: #ffffff;
+    color: #635f5f;
+}
+
+.button-amount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-cart {
+    font-size: 13px;
+    margin: 7px;
+    border: 1px solid #686565;
+    background: #ffffff;
+    color: #635f5f;
+}
+
+.button-cart {
+    display: flex;
+    position: relative;
+    left: 35%;
+}
+
+.amout {
+    margin: 7px;
+    font-size: 23px;
+}
+
+
+

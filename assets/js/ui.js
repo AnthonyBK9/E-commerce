@@ -46,7 +46,7 @@ function printProductShop(product) {
                                 <p class="card-text">$${product[i].price} US</p>
                             </div>
                             <div class="text-end">
-                                <button class="btn btn-success1 agregar-card" type="submit">
+                                <button class="btn btn-success1 agregar-card" type="submit" onclick="getId(${product[i].id}), getPrice(${product[i].price})">
                                     Agregar al carrito
                                 </button>
                             </div>
@@ -61,20 +61,34 @@ function printCart(product) {
     const cartView = document.getElementById('cartView'); 
     let htmlCart = '';
     for(let i = 0; i < product.length; i++){
-        htmlCart +=`<div class="col-md-12 mt-3">
-                        <div class="card">
+        htmlCart += //html
+                    `<div class="col-md-12">
+                        <div class="card-cart">
                             <div class="text-center">
-                                <div class="img-container">
-                                    <img src="${product[i].image}" alt="${product[i].name}">
+                                <div class="card-body-cart">
+                                    <div class="img-container-cart">
+                                        <img src="${product[i].image}" alt="${product[i].name}" class="img-container-cart">
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title-cart">${product[i].name}</h5>
+                                        <p class="card-text-cart">$${product[i].price} US</p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">${product[i].name}</h5>
-                                    <p class="card-text">${product[i].price}</p>
-                                </div>
-                                <div class="text-end">
-                                    <button class="btn btn-danger">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </button>
+                                <div class="button-cart">
+                                    <div class="button-amount">
+                                        <button class="btn-cart">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <h3 class="amout">0</h3>
+                                        <button class="btn-cart">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button class="delete-b">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>    
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 
 let cartProducts = [];
-let id = 1;
+let id;
+let price;
 document.addEventListener('click', addCart);
 
 function toggleCart() {
@@ -18,17 +19,28 @@ function addCart(e) {
     }
 }
 
+function getId(idP){
+    id = idP;
+    return id;
+}
+
+function getPrice(priceP) {
+    price = priceP;
+    return price;
+}
+
 function getCartProduct(cart) {
-    id++;
     const getCart = {
         id: id,
         image: cart.querySelector('img').src,
         name: cart.querySelector('h5').textContent,
-        price: cart.querySelector('p').textContent
+        price: price,
+        amount: 1
     }    
+    
     cartProducts.push(getCart);
     printCart(cartProducts);
     console.log(cartProducts);
 }
 
-export { toggleCart, addCart, getCartProduct};
+export { toggleCart, addCart, getCartProduct, getId, getPrice};
