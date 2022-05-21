@@ -46,7 +46,7 @@ function printProductShop(product) {
                                 <p class="card-text">$${product[i].price} US</p>
                             </div>
                             <div class="text-end">
-                                <button class="btn btn-success1 agregar-card" type="submit" onclick="getId(${product[i].id}), getPrice(${product[i].price})">
+                                <button class="btn btn-success1 agregar-card" type="submit" onclick="getId(${product[i].id}),getPrice(${product[i].price})">
                                     Agregar al carrito
                                 </button>
                             </div>
@@ -67,7 +67,7 @@ function printCart(product) {
                             <div class="text-center">
                                 <div class="card-body-cart">
                                     <div class="img-container-cart">
-                                        <img src="${product[i].image}" alt="${product[i].name}" class="img-container-cart">
+                                        <img src="${product[i].img}" alt="${product[i].name}" class="img-container-cart">
                                     </div>
                                     <div>
                                         <h5 class="card-title-cart">${product[i].name}</h5>
@@ -98,3 +98,4 @@ function printCart(product) {
 }
 
 export { printProduct, printProductShop, printCart };
+// , printCart
