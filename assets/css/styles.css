@@ -135,7 +135,10 @@ body {
 }
 
 /* ================ Carrito ================= */
-
+#cartView {
+    overflow-x: none;
+    overflow-y: scroll;
+}
 .card-body-cart {
     display: flex;
 }

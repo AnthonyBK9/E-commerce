@@ -1,24 +1,19 @@
-import { printProduct, printProductShop} from './ui.js';
-
-const url = 'https://e-commerce-api-academlo.herokuapp.com/api/products'
+import { printProduct, printProductShop } from './ui.js';
+const url = 'https://e-commerce-api-academlo.herokuapp.com/api/products';
 let editingID = null;
-
 function resetForm() {
     document.getElementById('form').reset();
 }
-
 function getProduct() {
     axios.get(url)
     .then((p) => {
         const products = p.data;
         printProduct(products);
-        
     })
     .catch((err) => {
         console.log('No se logró conectar la API');
     })
 }
-
 function getProductShop() {
     axios.get(url)
     .then((p) => {
@@ -30,7 +25,6 @@ function getProductShop() {
         console.log('No se logró conectar la API Shop');
     })
 }
-
 function createProduct() {
     const product = {
         name: document.getElementById('product').value,
@@ -48,7 +42,6 @@ function createProduct() {
         console.log(error);
     })
 }
-
 function deleteProduct(id){
     const confirmation = confirm('¿Estás seguro de eliminar la tarea?');
     if(!confirmation){
@@ -63,7 +56,6 @@ function deleteProduct(id){
         alert('No se pudo eliminar el producto pague por el >=|');
     })
 }
-
 function editProduct(id) {
     axios.get(`${url}/${id}`)
         .then((response) => {
@@ -78,7 +70,6 @@ function editProduct(id) {
             console.log('No se pudo editar el producto')
         })
 }
-
 function updateProduct() {
     const productEdited = {
         name:  document.getElementById('edit-product').value,
@@ -93,9 +84,4 @@ function updateProduct() {
             console.log('Problemas al editar')
         })
 }
-
-
-
 export { getProduct, getProductShop, createProduct, deleteProduct, editProduct, updateProduct}
-
-
