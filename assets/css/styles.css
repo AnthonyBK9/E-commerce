@@ -215,5 +215,59 @@ body {
     font-size: 23px;
 }
 
+.emptyCart {
+    margin-top: 10px;
+    position: relative;
+    right: -55%;
+}
 
+.btn-deleted {
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: #f1f1f1;
+    border: 1px solid #f34e4e;
+    color: #c91023;
+    transition: all 0.5s;
+}
 
+.btn-deleted:hover {
+    background: #f34e4e;
+    border: 1px solid #f34e4e;
+    color: #f1f1f1;
+    transition: all 0.5s;
+}
+
+/* =================== Total =================== */
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+    position: relative;
+    left: -10%;
+}
+
+.goCart {
+    margin-top: 20px;
+}
+
+.btn-goCart {
+    position: relative;
+    padding: 4px 2px;
+    left: 5%;
+    width: 90%;
+    background: #eb4a5a;
+    color: #fff;
+    border: 1px solid #f13144;
+    border-radius: 3px;
+}
+
+.btn-goCart:hover {
+    position: relative;
+    padding: 4px 2px;
+    left: 5%;
+    width: 90%;
+    background: #f06371;
+    color: #fff;
+    border: 1px solid #f13144;
+    border-radius: 3px;
+}

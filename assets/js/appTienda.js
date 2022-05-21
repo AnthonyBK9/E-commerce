@@ -1,4 +1,4 @@
-import { toggleCart, addCart, getId, getPrice} from "./DOM.js"
+import { toggleCart, addCart, getId, getPrice, deletedProduct, totalPrice} from "./DOM.js"
 import { getProductShop } from "./crud.js";
 import { printCart } from "./ui.js"
 
@@ -9,3 +9,5 @@ window.addCart = addCart;
 window.getId = getId;
 window.getPrice = getPrice;
 window.printCart = printCart;
+window.deletedProduct = deletedProduct;
+window.totalPrice = totalPrice;
