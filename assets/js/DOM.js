@@ -48,7 +48,8 @@ function getCartProduct(cart) {
             } else {
                 return productCard;
             }
-        })
+        });
+        cartProducts = [...product];
     } else {
         cartProducts = [...cartProducts, getCart]
     }
