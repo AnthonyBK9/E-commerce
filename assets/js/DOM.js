@@ -10,9 +10,9 @@ function toggleCart() {
     cart.classList.toggle('hidden');
     fixedCart.classList.toggle('fixedCart');
 }
+
 function addCart(e) {
     e.preventDefault();
-
     if(e.target.classList.contains('agregar-card')){
         const cart = e.target.parentElement.parentElement;
         getCartProduct(cart);
@@ -54,10 +54,8 @@ function getCartProduct(cart) {
         cartProducts = [...cartProducts, getCart]
     }
     
-    // cartProducts.push(getCart);
     printCart(cartProducts);
     console.log(cartProducts);
 }
-
 
 export { toggleCart, addCart, getCartProduct, getId, getPrice};

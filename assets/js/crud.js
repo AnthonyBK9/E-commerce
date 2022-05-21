@@ -15,7 +15,7 @@ function getProduct() {
         
     })
     .catch((err) => {
-        console.log('No se logró conectar la API');
+        console.log('No se logró mostrar los productos en la API');
     })
 }
 
@@ -24,10 +24,9 @@ function getProductShop() {
     .then((p) => {
         const products = p.data;
         printProductShop(products);
-        // console.log(products);
     })
     .catch((err) => {
-        console.log('No se logró conectar la API Shop');
+        console.log('No se logró mostrar los productos a los clientes');
     })
 }
 

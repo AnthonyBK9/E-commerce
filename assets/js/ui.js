@@ -56,6 +56,7 @@ function printProductShop(product) {
     }
     containerShop.innerHTML = htmlShop;
 }
+
 function printCart(product) {
     const cartView = document.getElementById('cartView'); 
     let htmlCart = '';
@@ -78,8 +79,8 @@ function printCart(product) {
                                         <button class="btn-cart">
                                             <i class="fa-solid fa-minus"></i>
                                         </button>
-                                        <h3 class="amout">0</h3>
-                                        <button class="btn-cart">
+                                        <h3 class="amout">${product[i].amount}</h3>
+                                        <button class="btn-cart" ">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
                                     </div>
